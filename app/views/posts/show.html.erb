@@ -1,0 +1,21 @@
+<div class="user-post">
+  <p>
+    Posted by <%= link_to @post.user.username, @post.user %>:
+  </p>
+  <h3>
+    <%= @post.content %>
+  </h3>
+</div>
+<div class="post-comments">
+  <%= pluralize(@post.comments.size, 'comment') %>
+  <% @post.comments.each do |comment| %>
+  <div class="user-comment">
+    <p>
+      Posted by <%= comment.user.username %>:
+      <blockquote cite="<%= comment.user.name%>">
+        <%= comment.content %>
+      </blockquote>
+    </p>
+  </div>
+  <% end %>
+</div>

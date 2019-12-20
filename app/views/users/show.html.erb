@@ -1,0 +1,27 @@
+<h1>Show user</h1>
+<p>
+  <strong>User: </strong><%= @user.name %>
+</p>
+<p>
+  <strong>Email: </strong><%= @user.email %>
+</p>
+<p>
+  <strong>Username: </strong><%= @user.username %>
+</p>
+<p>
+  <% @user.posts.each do |post| %>
+    <blockquote cite="<%= @user.name %>">
+      <h4>
+        Post: <%= post.content %>
+      </h4>
+      <p>
+        <% post.comments.each do |comment| %>
+          <p>
+            Comment from <%= comment.user.username %>: <%= comment.content %>
+          </p>
+        <% end %>
+      </p>
+      <%= link_to 'Show post', post %>
+    </blockquote>
+  <%end%>
+</p>

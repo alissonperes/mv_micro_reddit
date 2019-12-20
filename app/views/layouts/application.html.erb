@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <ul class="app-header">
+      <li class="app-header-item"><%= link_to 'Users', users_path %></li>
+      <li class="app-header-item"><%= link_to 'Posts', posts_path %></li>
+    </ul>
     <%= yield %>
   </body>
 </html>
