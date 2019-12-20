@@ -21,19 +21,17 @@
   display: inline;
 }
 
-.user-post {
-  border: 1px solid;
-  margin: 2rem;
-  padding: 2rem;
-}
-
-.post-comments {
-  margin: 2rem;
-  padding: 2rem;
+.page-title {
+  text-align: center;
 }
 
 .user-comment {
   border: 1px solid;
+  border-radius: 1rem;
   margin: .3rem;
   padding: .8rem;
+}
+
+.user-comment p{
+  font-size: 0.7rem;
 }
