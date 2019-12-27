@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources 'users'
   resources 'posts'
+  resources 'comments'
   root 'posts#index'
   # get 'comments/new'
   # get 'posts/new'

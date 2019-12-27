@@ -1,21 +1,13 @@
-<h1>Show user</h1>
-<p>
-  <strong>User: </strong><%= @user.name %>
-</p>
-<p>
-  <strong>Email: </strong><%= @user.email %>
-</p>
-<p>
-  <strong>Username: </strong><%= @user.username %>
-</p>
-<% @user.posts.each do |post| %>
+<%= will_paginate @user_posts %>
+<% @user_posts.each do |post| %>
 <div class="post-comments user-post">
-    <blockquote cite="<%= @user.name %>">
-      <h4>
-        <%= post.content %>
-      </h4>
-      <p><%= pluralize(post.comments.size, "comment") %></p>
-      <%= link_to 'Show post', post %>
-    </blockquote>
+  <p><%= link_to @user.username, @user %></p>
+  <blockquote cite="<%= @user.name %>">
+    <h4>
+      <%= post.content %>
+    </h4>
+    <p><%= pluralize(post.comments.size, "comment") %></p>
+    <%= link_to 'Show post', post %>
+  </blockquote>
 </div>
 <%end%>

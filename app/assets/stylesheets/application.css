@@ -15,6 +15,7 @@
  */
 .app-header {
   list-style: none;
+  text-align: center;
 }
 
 .app-header-item {
@@ -34,4 +35,9 @@
 
 .user-comment p{
   font-size: 0.7rem;
+}
+
+div.pagination {
+  width: 100vw;
+  text-align: center;
 }

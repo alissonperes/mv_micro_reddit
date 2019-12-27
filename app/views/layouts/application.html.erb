@@ -7,13 +7,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shim' %>
   </head>
 
   <body>
     <ul class="app-header">
       <li class="app-header-item"><%= link_to 'Users', users_path %></li>
       <li class="app-header-item"><%= link_to 'Posts', posts_path %></li>
+      <li class="app-header-item"><%= link_to 'New Post', new_post_path %></li>
     </ul>
-    <%= yield %>
+    <div class="container">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
+      <%= yield %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
   </body>
 </html>
