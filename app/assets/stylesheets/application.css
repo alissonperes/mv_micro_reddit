@@ -38,6 +38,6 @@
 }
 
 div.pagination {
-  width: 100vw;
   text-align: center;
+  width: inherit;
 }

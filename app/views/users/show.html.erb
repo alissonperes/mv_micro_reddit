@@ -1,3 +1,6 @@
+<p>
+  <%= @user.name %> | <%= @user.email %> | <%= @user.username %>
+</p>
 <%= will_paginate @user_posts %>
 <% @user_posts.each do |post| %>
 <div class="post-comments user-post">
