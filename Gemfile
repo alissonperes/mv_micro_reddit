@@ -15,13 +15,13 @@ gem 'rails', '~> 5.2.4'
 gem 'rack', '>= 2.0.8'
 gem 'rubocop'
 gem 'sass-rails', '~> 5.0'
-gem 'sqlite3'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate'
 
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
@@ -37,6 +37,10 @@ group :test do
   gem 'chromedriver-helper'
   gem 'selenium-webdriver'
   gem 'rails-controller-testing'
+end
+
+group :production do
+  gem 'pg', '0.20.0'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
