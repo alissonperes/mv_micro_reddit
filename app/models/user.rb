@@ -7,7 +7,8 @@ class User < ApplicationRecord
                     format: { with: URI::MailTo::EMAIL_REGEXP },
                     uniqueness: { case_sensitive: false }
   validates :username, presence: true, length: { minimum: 4, maximum: 60 },
-                       uniqueness: { case_sensitive: false }
+                       uniqueness: { case_sensitive: false },
+                       format: { without: /\s/, message: "can't contain spaces" }
   validates :password, presence: true, length: { minimum: 6 }
   has_secure_password
 end

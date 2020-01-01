@@ -14,12 +14,18 @@
  *= require_self
  */
 .app-header {
+  background: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
   list-style: none;
+  position: sticky;
+  top: 0;
   text-align: center;
 }
 
 .app-header-item {
-  display: inline;
+  margin: 0 2rem;
 }
 
 .page-title {
