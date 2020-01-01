@@ -18,6 +18,13 @@ Next, migrate the database:
 $ rails db:migrate
 ```
 
+If you wish, you could use my seed file to generate mock data. This will create random users and posts.
+
+
+```
+$ rails db:seed
+```
+
 Finally, run the test suite to verify that everything is working correctly:
 
 ```
