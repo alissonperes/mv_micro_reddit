@@ -1,0 +1,15 @@
+<h1 class="page-title">All Users</h1>
+<%= will_paginate %>
+<div class="all-users">
+  <div class="user-list">
+    <% @users.each do |user| %>
+    <div class="user-item">
+      <p>
+        <%= user.username %>
+      </p>
+      <%= link_to pluralize(user.posts.size, 'post'), user %>
+    </div>
+    <% end %>
+  </div>
+</div>
+<%= will_paginate %>

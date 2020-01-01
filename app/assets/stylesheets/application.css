@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+.app-header {
+  background: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  list-style: none;
+  position: sticky;
+  top: 0;
+  text-align: center;
+}
+
+.app-header-item {
+  margin: 0 2rem;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.user-comment {
+  border: 1px solid;
+  border-radius: 1rem;
+  margin: .3rem;
+  padding: .8rem;
+}
+
+.user-comment p{
+  font-size: 0.9rem;
+}
+
+div.pagination {
+  text-align: center;
+  width: inherit;
+}

@@ -1,0 +1,16 @@
+<p>
+  <%= @user.name %> | <%= @user.email %> | <%= @user.username %>
+</p>
+<%= will_paginate @user_posts %>
+<% @user_posts.each do |post| %>
+<div class="post-comments user-post">
+  <p><%= link_to @user.username, @user %></p>
+  <blockquote cite="<%= @user.name %>">
+    <h4>
+      <%= post.content %>
+    </h4>
+    <p><%= pluralize(post.comments.size, "comment") %></p>
+    <%= link_to 'Show post', post %>
+  </blockquote>
+</div>
+<%end%>

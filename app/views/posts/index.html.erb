@@ -1,0 +1,20 @@
+<h1 class="page-title">All posts</h1>
+<%= will_paginate %>
+<% @posts.each do |post| %>
+  <div class="user-post">
+    <div class="posted-link">
+      Posted by <%= link_to post.user.username, post.user %>
+    </div>
+    <div class="post-content">
+      <p>
+      </p>
+      <h3>
+        <%= link_to post.content, post %>
+      </h3>
+      <p>
+        <%= pluralize(post.comments.size, 'comment') %>
+      </p>
+    </div>
+  </div>
+<% end %>
+<%= will_paginate %>
