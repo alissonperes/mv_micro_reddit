@@ -1,3 +1,4 @@
+<% provide(:title, "Post from " + @post.user.username) %>
 <div class="user-post">
   <p>
     Posted by <%= link_to @post.user.username, @post.user %>:
