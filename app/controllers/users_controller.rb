@@ -4,7 +4,12 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.paginate(page: params[:page], per_page: 15)
+    if logged_in?
+      @users = User.paginate(page: params[:page], per_page: 15)
+    else
+      flash[:danger] = 'Login first!'
+      redirect_to posts_path
+    end
   end
 
   def show

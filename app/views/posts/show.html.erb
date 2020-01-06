@@ -19,7 +19,9 @@
       </p>
     </div>
     <% end %>
-    <%= render 'comment_form' %>
+    <% if logged_in?%>
+      <%= render 'comment_form' %>
+    <% end %>
 
   </div>
 </div>

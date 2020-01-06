@@ -9,11 +9,17 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    if logged_in?
+      @post = Post.new
+    else
+      flash[:danger] = 'Login first!'
+      redirect_to posts_path
+    end
   end
 
   def create
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
     if @post.save
       redirect_to @post
     else
@@ -22,6 +28,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:content, :user_id)
+    params.require(:post).permit(:content)
   end
 end

@@ -12,10 +12,10 @@
 
   <body>
     <ul class="app-header">
-      <li class="app-header-item"><%= link_to 'Users', users_path %></li>
       <li class="app-header-item"><%= link_to 'Posts', posts_path %></li>
-      <li class="app-header-item"><%= link_to 'New Post', new_post_path %></li>
       <% if logged_in? %>
+      <li class="app-header-item"><%= link_to 'Users', users_path %></li>
+      <li class="app-header-item"><%= link_to 'New Post', new_post_path %></li>
         <li class="app-header-item"><%= link_to 'Profile', current_user %></li>
         <li><%= link_to "Log out", logout_path, method: :delete %></li>
       <% else %>
