@@ -11,9 +11,10 @@ User.create!(name:'Example User',
              username: 'example_user',
              password: 'password',
              password_confirmation: 'password')
-
-Post.create!(content: 'First post!',
-             user_id: User.find_by(email: 'example@user.org').id)
+5.times do |x|
+  Post.create!(content: Faker::ChuckNorris.fact,
+               user_id: User.find_by(email: 'example@user.org').id)
+end
 
 99.times do |n|
   first_name = Faker::Name.unique.first_name
