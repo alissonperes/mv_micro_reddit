@@ -10,10 +10,6 @@ Checkout the full assignment description on [The Odin Project](https://www.theod
 - Html & CSS
 - Postgresql
 
-## Collaborator & profile link:
-
-- Allison Peres - [GitHub](https://github.com/alissonperes)
-
 ## Getting started
 
 To get started with the app, clone the repo and then install the needed gems:
@@ -46,3 +42,24 @@ If the test suite passes, you'll be ready to run the app in a local server:
 ```
 $ rails server
 ```
+
+## Author
+
+**Alisson Peres**
+
+- Github: [@alissonperes](https://github.com/alissonperes)
+- Linkedin: [linkedin](https://www.linkedin.com/in/alissonperes/)
+
+## Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
